@@ -10,19 +10,19 @@ int main() {
         cout << "Enter a six-digit number (or enter -1 to stop): ";
         cin >> number;
 
-        // Check if the user wants to stop
+        
         if (number == -1) {
             continueInput = false;
             break;
         }
 
-        // Check for six-digit number
+        
         if (number < 100000 || number > 999999) {
             cout << "Error: The entered number is not six digits long.\n";
             continue;
         }
 
-        // Split the number into digits
+        
         int digit1 = number / 100000;
         int digit2 = (number / 10000) % 10;
         int digit3 = (number / 1000) % 10;
@@ -30,7 +30,7 @@ int main() {
         int digit5 = (number / 10) % 10;
         int digit6 = number % 10;
 
-        // Check if it's a lucky number
+        
         if (digit1 + digit2 + digit3 == digit4 + digit5 + digit6) {
             cout << "The number is a lucky number!\n";
         }
